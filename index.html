@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNova Logo Download</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f3f4f6;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .logo-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo-preview {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 8px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dark-bg {
+            background: #1f2937;
+        }
+        .download-btn {
+            background: #10b981;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin: 5px;
+        }
+        .download-btn:hover {
+            background: #059669;
+        }
+        h1 {
+            color: #059669;
+            text-align: center;
+        }
+        h3 {
+            color: #374151;
+            margin-top: 0;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>EcoNova Logo Assets</h1>
+    <p class="subtitle">Download your brand logo in various formats and styles.</p>
+
+    <div class="container">
+        <!-- Primary Logo -->
+        <div class="logo-card">
+            <h3>Primary Logo</h3>
+            <div class="logo-preview">
+                <svg width="240" height="72" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Logo Symbol -->
+                    <g>
+                        <circle cx="30" cy="30" r="20" fill="url(#grad1)"/>
+                        <path d="M30 20 Q25 25 25 35 Q30 30 35 35 Q35 25 30 20" fill="white" opacity="0.9"/>
+                        <path d="M32 25 L28 32 L31 32 L29 38 L34 30 L31 30 Z" fill="white" opacity="0.8"/>
+                    </g>
+                    <!-- Text -->
+                    <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#059669">
+                        Eco<tspan fill="#10B981">Nova</tspan>
+                    </text>
+                    <text x="60" y="48" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" letter-spacing="0.5">
+                        SUSTAINABLE ENERGY
+                    </text>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadLogo('primary')">Download SVG</button>
+            <button class="download-btn" onclick="downloadLogoPNG('primary')">Download PNG</button>
+        </div>
+
+        <!-- Icon Only -->
+        <div class="logo-card">
+            <h3>Icon Only</h3>
+            <div class="logo-preview">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="40" cy="40" r="35" fill="url(#grad2)"/>
+                    <path d="M40 20 Q30 30 30 50 Q40 40 50 50 Q50 30 40 20" fill="white" opacity="0.9"/>
+                    <path d="M44 30 L36 44 L42 44 L38 56 L48 40 L42 40 Z" fill="white" opacity="0.8"/>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadLogo('icon')">Download SVG</button>
+            <button class="download-btn" onclick="downloadLogoPNG('icon')">Download PNG</button>
+        </div>
+
+        <!-- White Version -->
+        <div class="logo-card">
+            <h3>White Version (Dark Background)</h3>
+            <div class="logo-preview dark-bg">
+                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <!-- White circle -->
+                    <circle cx="30" cy="30" r="20" fill="white"/>
+                    <path d="M30 20 Q25 25 25 35 Q30 30 35 35 Q35 25 30 20" fill="#10B981" opacity="0.9"/>
+                    <path d="M32 25 L28 32 L31 32 L29 38 L34 30 L31 30 Z" fill="#059669" opacity="0.8"/>
+                    <!-- White text -->
+                    <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+                        EcoNova
+                    </text>
+                    <text x="60" y="48" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF" letter-spacing="0.5">
+                        SUSTAINABLE ENERGY
+                    </text>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadLogo('white')">Download SVG</button>
+            <button class="download-btn" onclick="downloadLogoPNG('white')">Download PNG</button>
+        </div>
+
+        <!-- Horizontal Compact -->
+        <div class="logo-card">
+            <h3>Horizontal Compact</h3>
+            <div class="logo-preview">
+                <svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="20" cy="20" r="15" fill="url(#grad3)"/>
+                    <path d="M20 12.5 Q16.25 16.25 16.25 23.75 Q20 20 23.75 23.75 Q23.75 16.25 20 12.5" fill="white" opacity="0.9"/>
+                    <path d="M21.5 16.25 L18.5 21.5 L20.75 21.5 L19.25 26 L23 20 L20.75 20 Z" fill="white" opacity="0.8"/>
+                    <text x="45" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#059669">
+                        Eco<tspan fill="#10B981">Nova</tspan>
+                    </text>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadLogo('horizontal')">Download SVG</button>
+            <button class="download-btn" onclick="downloadLogoPNG('horizontal')">Download PNG</button>
+        </div>
+
+        <!-- Monochrome Green -->
+        <div class="logo-card">
+            <h3>Monochrome Green</h3>
+            <div class="logo-preview">
+                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#059669"/>
+                    <path d="M30 20 Q25 25 25 35 Q30 30 35 35 Q35 25 30 20" fill="white" opacity="0.9"/>
+                    <path d="M32 25 L28 32 L31 32 L29 38 L34 30 L31 30 Z" fill="white" opacity="0.8"/>
+                    <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#059669">
+                        EcoNova
+                    </text>
+                    <text x="60" y="48" font-family="Arial, sans-serif" font-size="10" fill="#059669" letter-spacing="0.5">
+                        SUSTAINABLE ENERGY
+                    </text>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadLogo('mono')">Download SVG</button>
+            <button class="download-btn" onclick="downloadLogoPNG('mono')">Download PNG</button>
+        </div>
+
+        <!-- Text Only -->
+        <div class="logo-card">
+            <h3>Text Only</h3>
+            <div class="logo-preview">
+                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="35" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#059669" text-anchor="middle">
+                        Eco<tspan fill="#10B981">Nova</tspan>
+                    </text>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadLogo('text')">Download SVG</button>
+            <button class="download-btn" onclick="downloadLogoPNG('text')">Download PNG</button>
+        </div>
+    </div>
+
+    <script>
+        const logoData = {
+            primary: {
+                svg: `<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="30" cy="30" r="20" fill="url(#grad1)"/>
+                    <path d="M30 20 Q25 25 25 35 Q30 30 35 35 Q35 25 30 20" fill="white" opacity="0.9"/>
+                    <path d="M32 25 L28 32 L31 32 L29 38 L34 30 L31 30 Z" fill="white" opacity="0.8"/>
+                    <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#059669">
+                        Eco<tspan fill="#10B981">Nova</tspan>
+                    </text>
+                    <text x="60" y="48" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" letter-spacing="0.5">
+                        SUSTAINABLE ENERGY
+                    </text>
+                </svg>`,
+                filename: 'econova-logo'
+            },
+            icon: {
+                svg: `<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="40" cy="40" r="35" fill="url(#grad2)"/>
+                    <path d="M40 20 Q30 30 30 50 Q40 40 50 50 Q50 30 40 20" fill="white" opacity="0.9"/>
+                    <path d="M44 30 L36 44 L42 44 L38 56 L48 40 L42 40 Z" fill="white" opacity="0.8"/>
+                </svg>`,
+                filename: 'econova-icon'
+            },
+            white: {
+                svg: `<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="white"/>
+                    <path d="M30 20 Q25 25 25 35 Q30 30 35 35 Q35 25 30 20" fill="#10B981" opacity="0.9"/>
+                    <path d="M32 25 L28 32 L31 32 L29 38 L34 30 L31 30 Z" fill="#059669" opacity="0.8"/>
+                    <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+                        EcoNova
+                    </text>
+                    <text x="60" y="48" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF" letter-spacing="0.5">
+                        SUSTAINABLE ENERGY
+                    </text>
+                </svg>`,
+                filename: 'econova-logo-white'
+            },
+            horizontal: {
+                svg: `<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="20" cy="20" r="15" fill="url(#grad3)"/>
+                    <path d="M20 12.5 Q16.25 16.25 16.25 23.75 Q20 20 23.75 23.75 Q23.75 16.25 20 12.5" fill="white" opacity="0.9"/>
+                    <path d="M21.5 16.25 L18.5 21.5 L20.75 21.5 L19.25 26 L23 20 L20.75 20 Z" fill="white" opacity="0.8"/>
+                    <text x="45" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#059669">
+                        Eco<tspan fill="#10B981">Nova</tspan>
+                    </text>
+                </svg>`,
+                filename: 'econova-logo-horizontal'
+            },
+            mono: {
+                svg: `<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#059669"/>
+                    <path d="M30 20 Q25 25 25 35 Q30 30 35 35 Q35 25 30 20" fill="white" opacity="0.9"/>
+                    <path d="M32 25 L28 32 L31 32 L29 38 L34 30 L31 30 Z" fill="white" opacity="0.8"/>
+                    <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#059669">
+                        EcoNova
+                    </text>
+                    <text x="60" y="48" font-family="Arial, sans-serif" font-size="10" fill="#059669" letter-spacing="0.5">
+                        SUSTAINABLE ENERGY
+                    </text>
+                </svg>`,
+                filename: 'econova-logo-mono'
+            },
+            text: {
+                svg: `<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="35" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#059669" text-anchor="middle">
+                        Eco<tspan fill="#10B981">Nova</tspan>
+                    </text>
+                </svg>`,
+                filename: 'econova-text'
+            }
+        };
+
+        function downloadLogo(type) {
+            const data = logoData[type];
+            const blob = new Blob([data.svg], {type: "image/svg+xml;charset=utf-8"});
+            const url = URL.createObjectURL(blob);
+            
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = data.filename + '.svg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
+        function downloadLogoPNG(type) {
+            const data = logoData[type];
+            const img = new Image();
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            img.onload = function() {
+                canvas.width = img.width * 2;
+                canvas.height = img.height * 2;
+                ctx.scale(2, 2);
+                ctx.drawImage(img, 0, 0);
+                
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = data.filename + '.png';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+            };
+            
+            img.src = 'data:image/svg+xml;base64,' + btoa(data.svg);
+        }
+    </script>
+</body>
+</html>

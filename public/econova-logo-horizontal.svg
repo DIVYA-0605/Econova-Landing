@@ -1,0 +1,14 @@
+<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="20" cy="20" r="15" fill="url(#grad3)"/>
+                    <path d="M20 12.5 Q16.25 16.25 16.25 23.75 Q20 20 23.75 23.75 Q23.75 16.25 20 12.5" fill="white" opacity="0.9"/>
+                    <path d="M21.5 16.25 L18.5 21.5 L20.75 21.5 L19.25 26 L23 20 L20.75 20 Z" fill="white" opacity="0.8"/>
+                    <text x="45" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#059669">
+                        Eco<tspan fill="#10B981">Nova</tspan>
+                    </text>
+                </svg>

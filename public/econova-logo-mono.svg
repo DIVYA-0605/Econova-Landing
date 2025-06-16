@@ -1,0 +1,11 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#059669"/>
+                    <path d="M30 20 Q25 25 25 35 Q30 30 35 35 Q35 25 30 20" fill="white" opacity="0.9"/>
+                    <path d="M32 25 L28 32 L31 32 L29 38 L34 30 L31 30 Z" fill="white" opacity="0.8"/>
+                    <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#059669">
+                        EcoNova
+                    </text>
+                    <text x="60" y="48" font-family="Arial, sans-serif" font-size="10" fill="#059669" letter-spacing="0.5">
+                        SUSTAINABLE ENERGY
+                    </text>
+                </svg>
