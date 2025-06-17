@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { HeroSection as HeroType } from '@/types';
 import CTAButton from '@/components/sections/CTAButton';
@@ -22,6 +24,24 @@ export default function HeroSection({ hero }: Props) {
   // Fallback logic if preference doesn't match available media
   const displayVideo = shouldDisplayVideo || (!shouldDisplayImage && hasVideo && hero?.mediaPreference !== 'image');
   const displayImage = shouldDisplayImage || (!shouldDisplayVideo && hasImage && hero?.mediaPreference !== 'video');
+
+  // Scroll to next section handler
+  const scrollToNext = () => {
+    // Find the hero section and get the next sibling
+    const heroSection = document.querySelector('section');
+    if (heroSection && heroSection.nextElementSibling) {
+      heroSection.nextElementSibling.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      // Fallback: scroll down by viewport height
+      window.scrollTo({ 
+        top: window.innerHeight - 80, // Minus header height
+        behavior: 'smooth' 
+      });
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
@@ -97,11 +117,15 @@ export default function HeroSection({ hero }: Props) {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <button
+        onClick={scrollToNext}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce cursor-pointer transition-all hover:opacity-70 hover:scale-110 p-2 rounded-full hover:bg-white/10"
+        aria-label="Scroll to next section"
+      >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
-      </div>
+      </button>
     </section>
   );
 }
