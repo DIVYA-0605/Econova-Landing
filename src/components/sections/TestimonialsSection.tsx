@@ -49,7 +49,7 @@ export default function TestimonialsSection({ testimonials }: Props) {
                 <div className="max-w-4xl mx-auto text-center">
                   {testimonial.rating && <StarRating rating={testimonial.rating} />}
                   <blockquote className="text-xl md:text-2xl text-gray-800 font-medium mb-8 italic">
-                    "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   <div className="flex items-center justify-center gap-4">
                     {testimonial.author.profileImage && (
@@ -96,7 +96,7 @@ export default function TestimonialsSection({ testimonials }: Props) {
             >
               {testimonial.rating && <StarRating rating={testimonial.rating} />}
               <blockquote className="text-gray-700 mb-6 italic">
-                "{testimonial.quote}"
+                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <div className="flex items-center gap-3">
                 {testimonial.author.profileImage && (
