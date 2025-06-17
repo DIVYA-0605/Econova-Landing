@@ -69,16 +69,6 @@ export default function TestimonialsSection({ testimonials }: Props) {
                       <div className="text-gray-600">
                         {testimonial.author.title} at {testimonial.author.company}
                       </div>
-                      {testimonial.author.linkedInUrl && (
-                        <a
-                          href={testimonial.author.linkedInUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-green-600 hover:text-green-700 text-sm"
-                        >
-                          View LinkedIn Profile →
-                        </a>
-                      )}
                     </div>
                   </div>
                 </div>

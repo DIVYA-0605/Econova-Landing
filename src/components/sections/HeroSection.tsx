@@ -7,21 +7,26 @@ interface Props {
 }
 
 export default function HeroSection({ hero }: Props) {
-  const hasVideo = hero.backgroundVideo?.url;
-  const hasImage = hero.backgroundImage?.url;
+  // Add null checks and default values
+  if (!hero) {
+    return null;
+  }
+
+  const hasVideo = hero?.backgroundVideo?.url;
+  const hasImage = hero?.backgroundImage?.url;
   
   // Determine what to display based on preference
-  const shouldDisplayVideo = hero.mediaPreference === 'video' && hasVideo;
-  const shouldDisplayImage = hero.mediaPreference === 'image' && hasImage;
+  const shouldDisplayVideo = hero?.mediaPreference === 'video' && hasVideo;
+  const shouldDisplayImage = hero?.mediaPreference === 'image' && hasImage;
   
   // Fallback logic if preference doesn't match available media
-  const displayVideo = shouldDisplayVideo || (!shouldDisplayImage && hasVideo && hero.mediaPreference !== 'image');
-  const displayImage = shouldDisplayImage || (!shouldDisplayVideo && hasImage && hero.mediaPreference !== 'video');
+  const displayVideo = shouldDisplayVideo || (!shouldDisplayImage && hasVideo && hero?.mediaPreference !== 'image');
+  const displayImage = shouldDisplayImage || (!shouldDisplayVideo && hasImage && hero?.mediaPreference !== 'video');
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
       {/* Background Media */}
-      {displayVideo && hasVideo ? (
+      {displayVideo && hasVideo && hero.backgroundVideo ? (
         <>
           {/* Video Background */}
           <video
@@ -31,12 +36,12 @@ export default function HeroSection({ hero }: Props) {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={hero.backgroundVideo!.url} type="video/mp4" />
+            <source src={hero.backgroundVideo.url} type="video/mp4" />
             {/* Fallback to image if video fails to load */}
             {hasImage && hero.backgroundImage && (
               <Image
                 src={hero.backgroundImage.url}
-                alt={hero.backgroundImage.title}
+                alt={hero.backgroundImage.title || ''}
                 fill
                 className="object-cover"
                 priority
@@ -45,13 +50,13 @@ export default function HeroSection({ hero }: Props) {
           </video>
           <div className="absolute inset-0 bg-black/50" />
         </>
-      ) : displayImage && hasImage ? (
+      ) : displayImage && hasImage && hero.backgroundImage ? (
         <>
           {/* Image Background */}
           <div className="absolute inset-0">
             <Image
-              src={hero.backgroundImage!.url}
-              alt={hero.backgroundImage!.title}
+              src={hero.backgroundImage.url}
+              alt={hero.backgroundImage.title || ''}
               fill
               className="object-cover"
               priority
@@ -69,7 +74,7 @@ export default function HeroSection({ hero }: Props) {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up">
-          {hero.headline}
+          {hero.headline || 'Welcome to EcoNova'}
         </h1>
         
         {hero.subHeadline && (
